@@ -303,7 +303,7 @@ def edit(root):
 
     # Open a selection dialog using a gui picker like rofi
     names = [beautify(f.stem) for f in files]
-    _, index, selected = pick(names)
+    _, index, selected = pick(names, prompt="Select Figure")
     if selected:
         path = files[index]
         add_root(figures)
